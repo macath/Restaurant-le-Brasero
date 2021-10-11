@@ -1,19 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {# Run `composer require symfony/webpack-encore-bundle`
-           and uncomment the following Encore helpers to start using Symfony UX #}
-        {% block stylesheets %}
-            {#{{ encore_entry_link_tags('app') }}#}
-        {% endblock %}
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="Restaurant le Brasero" content="Restaurant...">
+        
+        <!-- Bootstrap core CSS & CSS-->
+        <link href= "{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/brasero.css') }}">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="{{ asset('assets/js/bootstrap.bundle.js') }}"></script>
 
-        {% block javascripts %}
-            {#{{ encore_entry_script_tags('app') }}#}
-        {% endblock %}
+        <title>{% block title %}Le Brasero{% endblock %}</title>
     </head>
+
     <body>
-        {% block body %}{% endblock %}
+        {% block content %}
+        {% endblock %}
     </body>
 </html>
