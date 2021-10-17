@@ -2,17 +2,22 @@
 
 namespace App\Controller;
 
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use App\Repository\DayMenuRepository;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class HomeController extends AbstractController
 {
     /**
      * @Route("/", name="home")
      */
-    public function index(): Response
+    public function index(DayMenuRepository $DayMenuRep): Response
     {
-        return $this->render('home/index.html.twig');
+        $dayMenu = $DayMenuRep->findAll();
+
+        return $this->render('home/index.html.twig',[
+            'dayMenu'=>$dayMenu
+        ]);
     }
 }
