@@ -13,7 +13,7 @@
         <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/brasero.css') }}">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script src="{{ asset('assets/js/bootstrap.bundle.js') }}"></script>
-        <link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
 
         <title>{% block title %}Le Braséro{% endblock %}</title>
@@ -22,10 +22,9 @@
     <body>
         <div class="container">
             
-            <header class="brasero-header py-3">
+            <header class="brasero-header">
                 <div class="text-center">
                     <img src="{{ asset('assets/images/logo.jpg') }}" alt="logo" class="img-fluid rounded-circle logoBrasero">
-                    <a class="brasero-header-logo ms-3" href="{{ path('home') }}">Le Braséro</a>
                 </div>
             </header>
 
@@ -40,19 +39,19 @@
                             <a class="nav-link" href="{{ path('home') }}">Accueil</a>
                         </li>
                         <li class="nav-item ms-5 me-5">
-                            <a class="nav-link" href="#">Galerie</a>
+                            <a class="nav-link" href="{{ path('galerie') }}">Galerie</a>
                         </li>
                         <li class="nav-item ms-5 me-5">
-                            <a class="nav-link" href="#">Menu</a>
+                            <a class="nav-link" href="{{ path('menu') }}">Menu</a>
                         </li>
                         <li class="nav-item ms-5 me-5">
-                            <a class="nav-link" href="#">Repas de groupe</a>
+                            <a class="nav-link" href="{{ path('groupe') }}">Repas de groupe</a>
                         </li>
                         <li class="nav-item ms-5 me-5">
-                            <a class="nav-link" href="#">Fournisseurs</a>
+                            <a class="nav-link" href="{{ path('eleveur') }}">Fournisseurs</a>
                         </li>
                         <li class="nav-item ms-5">
-                            <a class="nav-link" href="#">Contact</a>
+                            <a class="nav-link" href="{{ path('contact') }}">Contact</a>
                         </li>
                     </ul>
                 </div>
@@ -63,10 +62,24 @@
         {% block content %}
         {% endblock %}
 
-        <footer class="brasero-footer">
-            <p>
-              <a href="#">Haut de page</a>
-            </p>
-          </footer>
+        <footer class="container braseroFooter">
+            <div class="text-center braseroHoraires">
+                <h5>Horaires</h5>
+                <p>Du Mardi au Samedi de 12h00 à 15h00 <br>
+                    et du Jeudi au Samedi de 19h30 à 23h30
+                </p>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <a href="{{ path('legal') }}">Mentions légales</a>
+                </div>
+                <div class="col-md-4">
+                    <p>© Restaurant le Braséro - Tous droits réservés</p>
+                </div>
+                <div class="col-md-4">
+                    <a href="#">Haut de page</a>
+                </div>
+            </div>
+        </footer>
     </body>
 </html>

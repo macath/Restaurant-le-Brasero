@@ -3,97 +3,30 @@
   body{
     background-color: black;
     color: white;
+    margin: 0;
   }
 
   a{
     text-decoration: none;
+    color: #A30016;
   }
 
   a:hover{
-    text-shadow: 1px 1px 1px red;
+    color: white;
+    text-shadow: 1px 1px 1px #A30016;
   }
-  
+
   .brasero-header {
-    line-height: 1;
-    border-bottom: 1px solid red;
-    text-shadow: 1px 2px 2px grey;
-  }
-  
-  .brasero-header-logo {
-    font-family: "Playfair Display", Georgia, "Times New Roman", serif/*rtl:Amiri, Georgia, "Times New Roman", serif*/;
-    font-size: 2.25rem;
-    color: red;
-  }
-  
-  .brasero-header-logo:hover {
-    text-decoration: none;
-    color: red;
-    text-shadow: 1px 2px 2px red;
+    border-bottom: 1px solid #A30016;
+    padding: 15px 0;
   }
 
   .logoBrasero{
-    width: 90px;
+    width: 130px;
   }
   
   h1, h2, h3, h4, h5, h6 {
-    font-family: "Playfair Display", Georgia, "Times New Roman", serif/*rtl:Amiri, Georgia, "Times New Roman", serif*/;
-  }
-  
-  .display-4 {
-    font-size: 2.5rem;
-  }
-  @media (min-width: 768px) {
-    .display-4 {
-      font-size: 3rem;
-    }
-  }
-  
-  .nav-scroller {
-    position: relative;
-    z-index: 2;
-    height: 2.75rem;
-    overflow-y: hidden;
-  }
-  
-  .nav-scroller .nav {
-    display: flex;
-    flex-wrap: nowrap;
-    padding-bottom: 1rem;
-    margin-top: -1px;
-    overflow-x: auto;
-    text-align: center;
-    white-space: nowrap;
-    -webkit-overflow-scrolling: touch;
-  }
-  
-  .nav-scroller .nav-link {
-    padding-top: .75rem;
-    padding-bottom: .75rem;
-    font-size: .875rem;
-  }
-  
-  .flex-auto {
-    flex: 0 0 auto;
-  }
-  
-  .h-250 { height: 250px; }
-  @media (min-width: 768px) {
-    .h-md-250 { height: 250px; }
-  }
-  
-  /*
-   * Blog posts
-   */
-  .brasero-post {
-    margin-bottom: 4rem;
-  }
-  .brasero-post-title {
-    margin-bottom: .25rem;
-    font-size: 2.5rem;
-  }
-  .brasero-post-meta {
-    margin-bottom: 1.25rem;
-    color: #727272;
+    font-family: 'Balsamiq Sans', Georgia, "Times New Roman", sans-serif;
   }
 
   /* HOME */
@@ -106,21 +39,57 @@
     box-shadow: 5px 5px 5px rgb(65, 64, 64);
   }
 
-  .menudujour p, h4, h6{
+  .menudujour p, .menudujour h4, .menudujour h6{
     font-family: 'Indie Flower', Georgia, "Times New Roman", sans-serif;
     font-size: 20px;
   }
+
+  .braseroActu h3{
+    font-size: 28px;
+    font-style: italic;
+  }
+
+  .afficheMenu{
+    height: 600px;
+  }
   
   /* FOOTER */
-  .brasero-footer {
-    padding: 2.5rem 0;
+  .braseroFooter {
+    padding: 15px 0;
+    margin-top: 100px;
     color: #727272;
     text-align: center;
     background-color: black;
-    border-top: .05rem solid red;
+    font-size: 12px;
   }
 
-  .brasero-footer a{
+  .braseroFooter a{
+    color: grey;
+  }
+
+  .braseroHoraires{
     color: white;
   }
 
+  /* GALERIE */
+
+  .divider{
+    width: 200px;
+    height: 1px;
+    background: #A30016;
+    margin: 0 auto;
+  }
+
+  .brasero-header2 {
+    border-bottom: 1px solid #A30016;
+    padding: 15px 0;
+    width: 30%;
+  }
+
+  /* REPAS GROUPE */
+
+  .brasero-header3 {
+    border-bottom: 1px solid #A30016;
+    padding: 15px 0;
+    width: 40%;
+  }

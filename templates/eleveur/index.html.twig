@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nos Fournisseurs - Le Braséro{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="mb-4">
+            <img src="{{ asset('assets/images/viande.jpg') }}" alt="plat" class="img-fluid">
+        </div>
+    </div>
+
+    <div class="container">
+        <h5 class="brasero-header3 mb-5 text-center mx-auto d-block">Car vous préparer des produits d'exeptions est coeur de nos préoccupations, nous faisons le choix des meilleurs éleveurs !</h5>
+        
+        <div class="container my-5">
+            <div class="row">
+                <div class="col-md-8">
+                    <img src="{{ asset('assets/images/vache.jpg') }}" alt="vache" class="mx-auto d-block img-thumbnail w-75">
+                </div>
+                <div class="col-md-4 my-auto d-block">
+                    <h5 class="text-center">Lorem ipsum</h5>
+                    <hr>
+                    <p>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="container my-5">
+            <div class="row">
+                <div class="col-md-4 my-auto d-block">
+                    <h5 class="text-center">Lorem ipsum</h5>
+                    <hr>
+                    <p>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                </div>
+                <div class="col-md-8">
+                    <img src="{{ asset('assets/images/vache.jpg') }}" alt="vache" class="mx-auto d-block img-thumbnail w-75">
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

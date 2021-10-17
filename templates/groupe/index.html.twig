@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Repas groupe - Le Braséro{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="mb-4">
+            <img src="{{ asset('assets/images/platgroupe.jpg') }}" alt="plat" class="img-fluid">
+        </div>
+    </div>
+
+    <div class="container">
+        <h5 class="brasero-header3 mb-5 text-center mx-auto d-block">Vous souhaitez organiser un anniversaire, un repas d'affaires ou autres événements, merci de nous contacter par téléphone au 04 99 75 34 56 ou via notre <a href="{{ path('contact') }}">formulaire de contact</a></h5>
+        <img src="{{ asset('assets/images/repasgroupe.jpg') }}" alt="repas de groupe" class="img-thumbnail mx-auto d-block">
+    </div>
+{% endblock %}
