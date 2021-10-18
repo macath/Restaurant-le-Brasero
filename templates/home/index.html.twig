@@ -33,23 +33,14 @@
                     <img src="{{ asset('assets/images/cartevisite.png') }}" class="mx-auto d-block img-thumbnail w-75 mb-5" alt="carte de visite">
                 </div>
                 <div class="braseroActu">
+                    {% for actus in actu %}
                     <hr>
-                    <h3>Paëlla au feu de bois !</h3>
-                    <p>17 Octobre, 2021</p>
-                    <img src="{{ asset('assets/images/menupaella.jpg') }}" alt="paella" class="img-fluid mx-auto d-block afficheMenu">
+                    <h3>{{ actus.titre }}</h3>
+                    <p>{{ actus.date }}</p>
+                    <p>{{ actus.texte }}</p>
+                    <img src="./uploads/{{ actus.image }}" alt="{{ actus.titre }}" class="img-fluid mx-auto d-block afficheMenu">
                     <hr>
-                    <h3>Cochon à la broche !</h3>
-                    <p>12 Septembre, 2021</p>
-                    <img src="{{ asset('assets/images/menucochondelait.jpg') }}" alt="affichecochon" class="img-fluid mx-auto d-block afficheMenu">
-                    <hr>
-                    <h3>Fête des mères !</h3>
-                    <p>30 Mai, 2021</p>
-                    <img src="{{ asset('assets/images/menufetedesmeres.jpg') }}" alt="fête des mères" class="img-fluid mx-auto d-block afficheMenu">
-                    <hr>
-                    <h3>Saint Valentin</h3>
-                    <p>14 Février, 2021</p>
-                    <img src="{{ asset('assets/images/menustvalentin.jpg') }}" alt="st valentin" class="img-fluid mx-auto d-block afficheMenu">
-                    <hr>
+                    {% endfor %}
                     
                 </div>
             </article>
