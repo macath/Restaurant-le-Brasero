@@ -9,11 +9,18 @@
         </div>
     </div>
     <div class="container">
-        <br><br><br>
-        <h5 class="text-center">Pour venir au restaurant : </h5>
-        <img src="{{ asset('assets/images/plan.png') }}" alt="plat" class="img-thumbnail mx-auto d-block">
-        <br><br><br>
-        FORMULAIRE DE CONTACT
+        <div class="my-5">
+            <h5 class="contact1 d-block mx-auto text-center mb-4">Pour venir au restaurant</h5>
+            <img src="{{ asset('assets/images/plan.png') }}" alt="plat" class="img-thumbnail mx-auto d-block">
+        </div>
+        <div class="text-center">
+            <h5 class="contact1 d-block mx-auto text-center">Pour nous contacter</h5>
+            <p><span class="contact2">Par téléphone au 04 99 75 34 56</span><br>
+            <span class="contact2">ou par E-Mail grâce à notre formulaire de contact :</span></p>
+        </div>
+        <div class="mx-auto d-block contact-form">
+            {{ form(form) }}
+        </div>
     </div>
     
 

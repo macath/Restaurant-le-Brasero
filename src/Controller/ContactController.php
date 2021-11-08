@@ -2,17 +2,50 @@
 
 namespace App\Controller;
 
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use App\Form\ContactType;
+use Symfony\Component\Mime\Email;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Mailer\MailerInterface;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class ContactController extends AbstractController
 {
     /**
      * @Route("/contact", name="contact")
      */
-    public function index(): Response
+    public function index(Request $request, MailerInterface $mailer)
     {
-        return $this->render('contact/index.html.twig');
+        $form = $this->createForm(ContactType::class);
+
+        $form->handleRequest($request);
+
+
+        if($form->isSubmitted() && $form->isValid()) {
+
+            $contactFormData = $form->getData();
+            
+            $message = (new Email())
+                ->from($contactFormData['email'])
+                ->to('manu.cathelain@hotmail.fr')
+                ->subject('Vous avez reçu un E-Mail depuis votre site Le Braséro')
+                ->text('Expéditeur : '.$contactFormData['email'].\PHP_EOL.
+                    $contactFormData['message'],
+                    'text/plain'.
+                    'De la part de '.$contactFormData['fullName'].', numéro de téléphone '.$contactFormData['phone']);
+            $mailer->send($message);
+
+            $this->addFlash('success', 'Votre message a été envoyé !');
+
+            
+            return $this->redirectToRoute('contact');
+        }
+
+
+
+        return $this->render('contact/index.html.twig', [
+            'form' => $form->createView()
+        ]);
     }
 }
