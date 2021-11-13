@@ -32,7 +32,7 @@
   /* HOME */
 
   .menudujour{
-    height: 500px;
+    max-height: 750px;
     background-color: #191D24;
     border-radius: 2px;
     border: 15px solid #462520;
@@ -60,7 +60,7 @@
     color: #727272;
     text-align: center;
     background-color: black;
-    font-size: 12px;
+    font-size: 14px;
   }
 
   .braseroFooter a{
@@ -111,5 +111,7 @@
   .contact2{
     font-size: 20px;
   }
+
+
 
   

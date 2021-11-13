@@ -30,7 +30,7 @@ class ActualityCrudController extends AbstractCrudController
             ->setBasePath('uploads/')
             ->setUploadDir('public/uploads')
             ->setUploadedFileNamePattern('[randomhash].[extension]')
-            ->setRequired(true)
+            ->setRequired(false)
         ];
     }
 }

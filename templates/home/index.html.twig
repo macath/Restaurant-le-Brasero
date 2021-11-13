@@ -14,13 +14,14 @@
         {% for items in dayMenu %}
         <div class="col-md-4 mb-5">
             <div class="position-sticky menudujour" style="top: 2rem;">
-                <h4 class="mt-3 text-center">Menu du Jour<br>{{ (items.prix /100)|number_format(2, ',' , '.') }} €</h4>
-                <h6 class="mt-5 text-center">Entrée :</h6>
+                <h4 class="mt-3 text-center">{{ items.title }}<br>{{ (items.prix /100)|number_format(2, ',' , '.') }} €</h4>
+                <h6 class="mt-5 text-center">{{ items.subtitle1 }}</h6>
                 <p class="mt-4 text-center">{{ items.entree }}</p>
-                <h6 class="mt-5 text-center">Plat :</h6>
+                <h6 class="mt-5 text-center">{{ items.subtitle2 }}</h6>
                 <p class="mt-4 text-center">{{ items.plat }}</p>
-                <h6 class="mt-5 text-center">Dessert :</h6>
+                <h6 class="mt-5 text-center">{{ items.subtitle3 }}</h6>
                 <p class="mt-4 text-center">{{ items.dessert }}</p>
+                <img src="./uploads/{{ items.image }}" alt="" class="mx-auto d-block img-fluid w-75">
             </div>
         </div>
         {% endfor %}
@@ -41,7 +42,6 @@
                     <img src="./uploads/{{ actus.image }}" alt="{{ actus.titre }}" class="img-fluid mx-auto d-block afficheMenu">
                     <hr>
                     {% endfor %}
-                    
                 </div>
             </article>
         </div>
