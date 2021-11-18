@@ -5,18 +5,24 @@
 {% block content %}
     <div class="container">
         <div class="mb-4">
-            <img src="{{ asset('assets/images/terrasse2.jpg') }}" alt="plat" class="img-fluid">
+            <img src="{{ asset('assets/images/terrasse3.png') }}" alt="plat" class="img-fluid">
         </div>
     </div>
-    <div class="container">
+    <div class="container where2findus">
         <div class="my-5">
             <h5 class="contact1 d-block mx-auto text-center mb-4">Pour venir au restaurant</h5>
+            <p class="d-block mx-auto mb-4">Notre restaurant est situé entre une zone artisanale: La ZA FONTVIN et une zone pavillonnaire.
+            Il est difficile de se garer devant le restaurant mais nous avons de nombreuses places à quelques mètres du resto : il faut juste tourner un peu. Nous disposons d’une petite cour ou vous pouvez vous garer. <br>
+            Si vous avez malgré tout des difficultés pour vous garer, apellez au 06 38 80 05 32 nous vous garerons votre voiture.</p>
             <img src="{{ asset('assets/images/plan.png') }}" alt="plat" class="img-thumbnail mx-auto d-block">
         </div>
         <div class="text-center">
             <h5 class="contact1 d-block mx-auto text-center">Pour nous contacter</h5>
-            <p><span class="contact2">Par téléphone au 04 99 75 34 56</span><br>
+        </div>
+        <div>
+            <p class="d-block mx-auto text-center"><span class="contact2">Par téléphone au 04 99 75 34 56</span><br>
             <span class="contact2">ou par E-Mail grâce à notre formulaire de contact :</span></p>
+            <!-- <p class="contact2 d-block mx-auto text-center">ou par E-mail en cliquant sur le lien <br> <a href="mailto:christophebru34@gmail.com">ICI</a></p> -->
         </div>
         <div class="mx-auto d-block contact-form">
             {{ form(form) }}

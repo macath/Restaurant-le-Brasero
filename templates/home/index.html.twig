@@ -7,31 +7,64 @@
   
   <main class="container">
     <div class="mb-4">
-      <img src="{{ asset('assets/images/feudebois.jpg') }}" alt="feu" class="img-fluid">
+      <img src="{{ asset('assets/images/feu.jpg') }}" alt="feu" class="img-fluid">
     </div>
   
     <div class="row g-5">
-        {% for items in dayMenu %}
+        {% if dayMenu == null %}
         <div class="col-md-4 mb-5">
             <div class="position-sticky menudujour" style="top: 2rem;">
-                <h4 class="mt-3 text-center">{{ items.title }}<br>{{ (items.prix /100)|number_format(2, ',' , '.') }} €</h4>
-                <h6 class="mt-5 text-center">{{ items.subtitle1 }}</h6>
-                <p class="mt-4 text-center">{{ items.entree }}</p>
-                <h6 class="mt-5 text-center">{{ items.subtitle2 }}</h6>
-                <p class="mt-4 text-center">{{ items.plat }}</p>
-                <h6 class="mt-5 text-center">{{ items.subtitle3 }}</h6>
-                <p class="mt-4 text-center">{{ items.dessert }}</p>
-                <img src="./uploads/{{ items.image }}" alt="" class="mx-auto d-block img-fluid w-75">
+                <h4 class="mt-4 text-center recoh4">Les incontournables du Braséro</h4>
+                <p class="mt-5 text-center">* Les cuisses de grenouille</p>
+                <p class="mt-3 text-center">* L’os à moelle</p>
+                <p class="mt-3 text-center">* Le camembert à la braise</p>
+                <p class="mt-3 text-center">* La souris d’agneau</p>
+                <p class="mt-3 text-center">* L’andouillette 5A</p>
+                <p class="mt-3 text-center">* Le boeuf de race Angus</p>
+                <p class="mt-3 text-center">* Le célèbre baba au rhum</p>
+                <p class="my-5 text-center">Et bien d'autres surprises</p>
             </div>
         </div>
-        {% endfor %}
+        {% else %}
+            {% for items in dayMenu %}
+            <div class="col-md-4 mb-5">
+                <div class="position-sticky menudujour" style="top: 2rem;">
+                    <h4 class="mt-3 text-center">{{ items.title }}<br>{{ (items.prix /100)|number_format(2, ',' , '.') }} €</h4>
+                    <h6 class="mt-5 text-center">{{ items.subtitle1 }}</h6>
+                    <p class="mt-4 text-center">{{ items.entree }}</p>
+                    <h6 class="mt-5 text-center">{{ items.subtitle2 }}</h6>
+                    <p class="mt-4 text-center">{{ items.plat }}</p>
+                    <h6 class="mt-5 text-center">{{ items.subtitle3 }}</h6>
+                    <p class="mt-4 text-center">{{ items.dessert }}</p>
+                    <img src="./uploads/{{ items.image }}" alt="" class="mx-auto d-block img-fluid w-75">
+                </div>
+            </div>
+            {% endfor %}
+        {% endif %}
 
         <div class="col-md-8">
             <article class="mb-5">
-                <div class="">
+                <div class=""> 
                     <h3 class="fst-italic">Qui sommes nous?</h3>
-                    <p class="my-4">Multiple lines of text that form the lede, informing new readers quickly and efficiently about what’s most interesting in this post’s contents.</p>
-                    <img src="{{ asset('assets/images/cartevisite.png') }}" class="mx-auto d-block img-thumbnail w-75 mb-5" alt="carte de visite">
+                    <p class="my-4">Le Braséro est un restaurant traditionnel avec une cuisine au feu de bois. <br><br>
+                        <img src="{{ asset('assets/images/chris2.jpg') }}" alt="" class="img-fluid float-md-end d-none d-lg-block chris2">
+                        Il dispose : <br>
+                        D’une salle chauffée l’hiver et climatisée l’été. <br>
+                        De deux belles terrasses entourées de bambous. <br><br>
+                        Au Braséro, nous vous recevons dans un cadre chaleureux, dans une ambiance conviviale et familiale. <br>
+                        Nous vous servons des plats traditionnels maisons. <br>
+                        Nous travaillons les viandes de race Angus, Aubrac, Simmental... <br>
+                        Nous sélectionnons des produits régionaux que nous avons choisis avec le plus grand soin. <br><br>
+                        Restaurateur depuis plus de 20 ans Christophe retrouve avec le Braséro, une structure à taille humaine où il peut s’occuper de tous ses clients et les chouchouter. <br>
+                        Il s’est entouré d’une équipe dynamique et rigoureuse pour faire passer un bon moment à ses clients. <br><br>
+                        Le restaurant est ouvert : <br>
+                        Du Lundi au samedi MIDI <br>
+                        Jeudi, Vendredi et Samedi SOIR <br><br>
+                        Il est conseillé de réserver au 04 99 75 34 56 pour être sûr d’avoir une table. <br><br>
+                        Vous avez la possibilité de privatiser un espace du restaurant pour des repas de famille
+                        ( anniversaire, communion…), des repas de travail… <br>
+                        Nos devis sont réalisés en moins de 24 H<br><br>
+                        Christophe et Laetitia : les créateurs du Braséro</p>
                 </div>
                 <div class="braseroActu">
                     {% for actus in actu %}

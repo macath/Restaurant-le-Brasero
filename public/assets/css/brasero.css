@@ -39,7 +39,7 @@
     box-shadow: 5px 5px 5px rgb(65, 64, 64);
   }
 
-  .menudujour p, .menudujour h4, .menudujour h6{
+  .menudujour p, .menudujour h6{
     font-family: 'Indie Flower', Georgia, "Times New Roman", sans-serif;
     font-size: 20px;
   }
@@ -52,11 +52,20 @@
   .afficheMenu{
     height: 600px;
   }
+
+  .chris2{
+    width: 300px;
+  }
+
+  .recoh4{
+    font-family: 'Indie Flower', Georgia, "Times New Roman", sans-serif;
+    font-size: 24px;
+  }
   
   /* FOOTER */
   .braseroFooter {
     padding: 15px 0;
-    margin-top: 100px;
+    margin-top: 80px;
     color: #727272;
     text-align: center;
     background-color: black;
@@ -89,9 +98,13 @@
   /* REPAS GROUPE */
 
   .brasero-header3 {
-    border-bottom: 1px solid #A30016;
     padding: 15px 0;
     width: 40%;
+  }
+
+  .dessertgroup{
+    width: 50%;
+    margin-bottom: 5%;
   }
 
   /* CONTACT */
@@ -110,6 +123,10 @@
 
   .contact2{
     font-size: 20px;
+  }
+
+  .where2findus p{
+    width: 75%;
   }
 
 
