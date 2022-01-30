@@ -1,85 +1,107 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-        <meta name="generator" content="Hugo 0.88.1">
-        <meta name="Restaurant le Brasero" content="Restaurant...">
-        
-        <!-- Bootstrap core CSS & CSS-->
-        <link href= "{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/brasero.css') }}">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-        <script src="{{ asset('assets/js/bootstrap.bundle.js') }}"></script>
-        <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
 
-        <title>{% block title %}Le Braséro{% endblock %}</title>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.88.1">
+    <meta name="Restaurant le Brasero" content="Restaurant...">
 
-    <body>
-        <div class="container">
-            
-            <header class="brasero-header">
-                <div class="text-center">
-                    <img src="{{ asset('assets/images/logo.jpg') }}" alt="logo" class="img-fluid rounded-circle logoBrasero">
-                </div>
-            </header>
+    <!-- Bootstrap core CSS & CSS-->
+    <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/brasero.css') }}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="{{ asset('assets/js/bootstrap.bundle.js') }}"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
 
-            <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <!-- SEO -->
+    <meta name="Restaurant le Brasero Lattes"
+        content="Restaurant Grill au feu de bois authentique. Ouvert du Lundi au Samedi MIDI et du Jeudi au samedi SOIR. Terrasse ombragée et couverte. Réservations / 04 99 75 34 56">
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <link rel="canonical" href="https://www.lebraserolattes.fr/" />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Emmanuel Cathelain" />
+    <meta property=”og:image” contenu=”../public/assets/images/chris.jpg” />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="lebraséro" />
+    <meta property="article:modified_time" content="2022-01-26T22:48:47+00:00" />
+    <meta property="og:url" content="https://www.lebraserolattes.fr/" />
+    <meta property="og:title" content="Restaurant de grillades à lattes" />
+    <meta property="og:description"
+        content="Restaurant Grill au feu de bois authentique. Ouvert du Lundi au Samedi MIDI et du Jeudi au samedi SOIR. Terrasse ombragée et couverte" />
+
+    <title>{% block title %}Le Braséro{% endblock %}</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <header class="brasero-header">
+            <div class="text-center">
+                <img src="{{ asset('assets/images/logo.jpg') }}" alt="logo"
+                    class="img-fluid rounded-circle logoBrasero">
+            </div>
+        </header>
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
-                </button>
-            
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav m-auto">
-                        <li class="nav-item me-5 active">
-                            <a class="nav-link" href="{{ path('home') }}">Accueil</a>
-                        </li>
-                        <li class="nav-item mx-5">
-                            <a class="nav-link" href="{{ path('contact') }}">Où nous trouver</a>
-                        </li>
-                        <li class="nav-item mx-5">
-                            <a class="nav-link" href="{{ path('galerie') }}">Galerie</a>
-                        </li>
-                        <li class="nav-item mx-5">
-                            <a class="nav-link" href="{{ path('menu') }}">Menu</a>
-                        </li>
-                        <li class="nav-item mx-5">
-                            <a class="nav-link" href="{{ path('groupe') }}">Evenementiel</a>
-                        </li>
-                        <li class="nav-item ms-5">
-                            <a class="nav-link" href="{{ path('eleveur') }}">Fournisseurs</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
+            </button>
 
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav m-auto">
+                    <li class="nav-item me-5 active">
+                        <a class="nav-link" href="{{ path('home') }}">Accueil</a>
+                    </li>
+                    <li class="nav-item mx-5">
+                        <a class="nav-link" href="{{ path('contact') }}">Où nous trouver</a>
+                    </li>
+                    <li class="nav-item mx-5">
+                        <a class="nav-link" href="{{ path('galerie') }}">Galerie</a>
+                    </li>
+                    <li class="nav-item mx-5">
+                        <a class="nav-link" href="{{ path('menu') }}">Menu</a>
+                    </li>
+                    <li class="nav-item mx-5">
+                        <a class="nav-link" href="{{ path('groupe') }}">Evenementiel</a>
+                    </li>
+                    <li class="nav-item ms-5">
+                        <a class="nav-link" href="{{ path('eleveur') }}">Fournisseurs</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+    </div>
+
+    {% block content %}
+    {% endblock %}
+
+    <footer class="container braseroFooter">
+        <div class="text-center braseroHoraires">
+            <h5>Horaires</h5>
+            <p>Du Lundi au Samedi MIDI <br>
+                et du Jeudi au Samedi SOIR
+            </p>
         </div>
-
-        {% block content %}
-        {% endblock %}
-
-        <footer class="container braseroFooter">
-            <div class="text-center braseroHoraires">
-                <h5>Horaires</h5>
-                <p>Du Lundi au Samedi MIDI <br>
-                    et du Jeudi au Samedi SOIR
-                </p>
+        <div class="row">
+            <div class="col-md-4">
+                <a href="{{ path('legal') }}">Mentions légales</a>
             </div>
-            <div class="row">
-                <div class="col-md-4">
-                    <a href="{{ path('legal') }}">Mentions légales</a>
-                </div>
-                <div class="col-md-4">
-                    <p>© Restaurant le Braséro - Tous droits réservés</p>
-                </div>
-                <div class="col-md-4">
-                    <a href="#">Haut de page</a>
-                </div>
+            <div class="col-md-4">
+                <p>© Restaurant le Braséro - Tous droits réservés</p>
             </div>
-        </footer>
-    </body>
+            <div class="col-md-4">
+                <a href="#">Haut de page</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
 </html>

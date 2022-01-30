@@ -115,7 +115,6 @@
 
   .contact1{
     padding-bottom: 20px;
-    margin-bottom: 20px;
     font-size: 25px;
     border-bottom: 1px solid #A30016;
     max-width: 300px;
@@ -123,6 +122,22 @@
 
   .contact2{
     font-size: 20px;
+    margin-top: 30px;
+  }
+
+  .contact3{
+    font-size: 20px;
+  }
+
+  .contact4{
+    font-size: 17px;
+    margin-top: 30px;
+    padding-bottom: 20px;
+  }
+
+  .mailLink{
+    padding-top: 10px;
+    font-size: 23px;
   }
 
   .where2findus p{
